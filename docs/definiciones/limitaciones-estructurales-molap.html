@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html []>
+<html lang="es" data-authenticationTime="1 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="13 ms" data-engineVariablesTime="1 ms" data-responseCreationTime="3" data-evaluationTime="10" data-queryTime="0" data-evaluationsCount="196" data-queryCount="1" data-query="definiciones/limitaciones-estructurales-molap.html">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true" />
+    <title>¿Los cubos OLAP son una basura?</title>
+    <meta name="description" content="Intentaré en este artículo de business Intelligence fácil aclarar cuales son las “limitaciones estructurales” de las soluciones MOLAP, y por qué los cubos no son siempre la mejor solución posible." />
+    <meta name="keywords" content="Business Intelligence,datawarehouse,crono,BI,cuadro de mando,Barcelona,España" />
+    <meta name="y_key" content="f9df80cf3ef594d6" />
+    <meta name="google-site-verification" content="w6gZESf_S3APOXfjzJMrnLIiA9bcWeRPJSTjlB-8Mfg" />
+    <meta name="msvalfidate.01" content="401B0C3C6EEDE1AC271C85838378209E" />
+    <link href="../resources/images/favicon.png" rel="shortcut icon" />
+    <link href="../resources/js/animations/animate.min.css" rel="stylesheet" />
+    <link href="../resources/css/fontawesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="../resources/css/iconfontcustom/icon-font-custom.css" rel="stylesheet" />
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../resources/css/base.css" rel="stylesheet" />
+    <link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet" />
+    <link href="https://www.businessintelligence.info/rss.xml" rel="alternate" type="application/rss+xml" title="(RSS)" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" />
+    <link href="https://www.businessintelligence.info/definiciones/limitaciones-estructurales-molap.html" rel="canonical" />
+    <script src="../resources/js/jquery-2.1.1.min.js"></script>
+    <script src="../resources/js/viewport/jquery.viewport.js"></script>
+    <script>
+      (function() {
+        var cx = '001840061174465826245:yxey5gkicrq';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header" class="stuck">
+        <div class="row">
+          <div class="span3">
+            <div id="logo">
+              <a href="../index.html">
+                <img src="../resources/images/Logo-bif-crono.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="span9">
+            <a href="#" id="mobile-menu-trigger">
+              <i class="fa fa-bars"></i>
+            </a>
+            <nav>
+              <ul class="sf-menu fixed" id="menu">
+                <li>
+                  <div class="buscador_google">
+                    <div class="gcse-search"></div>
+                  </div>
+                </li>
+                <li>
+                  <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                  <a href="../archivo.html">Archivo</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="row" id="banner">
+        <div class="span10 banner">
+          <a href="https://businessintelligence.es" alt="Business Intelligence">
+            <img src="../resources/images/banner1.jpg" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <main class="span10 post">
+          <article>
+            <div>
+              <div class="up-title">
+                <h1>¿Los cubos OLAP son una basura?</h1>
+                <a class="catlink" href="../categorias.html#definiciones">Definiciones</a>
+              </div>
+              <div class="fecha">martes, 9 de agosto de 2011</div>
+              <p>
+                <a href="https://www.businessintelligence.info/mercado/microsoft-vs-bingo-intelligence.html">En un reciente artículo he recibido muchas críticas</a>
+                <span> por menospreciar las capacidades de los cubos OLAP. Creo que la mayor polémica ha surgido al afirmar que los cubos OLAP tienen limitaciones estructurales, y que no se adaptan suficientemente bien al negocio.
+</span>
+              </p>
+              <p>Intentaré en este artículo aclarar cuáles son estas “limitaciones estructurales” de las que hablo, y por qué los cubos no son siempre la mejor solución posible.
+</p>
+              <p>El ejemplo típico de cubo OLAP consiste invariablemente en un cubo comercial con las ventas en unidades e importes. Así, tenemos las ventas por producto, por familia, por categoría, o por fechas, semanas, meses, años, o por cliente, provincia, región o país... Todo muy bonito y muy fácil. 
+</p>
+              <p>En la vida real, sin embargo, existen muchas bases de datos corporativas donde la “agregaciones dimensionales” no es lo más relevante, y donde el “dato” no es un número fácilmente agregable. Os pongo tres ejemplos:
+</p>
+              <ul>
+                <li>
+                  <b>Un proyecto de SCM</b>
+                  <span> (cadena de suministro). En este caso se dispone de calcetines o bolígrafos que se encajan en China o Tailandia, y que se ponen en contenedores, y que viajan hasta Europa utilizando barcos, aviones y camiones... En todo este proceso, existen multitud de eventos y fechas significativas (fecha de encajado, de embarque, aduanas, incoterm, de entrada en almacén, y un larguísimo etcétera que si vives el sector conocerás). ¿Acaso no es necesario hacer un análisis de estos datos? ¿Acaso los usuarios no necesitan acceder fácil y rápidamente a todos estos datos? Claro que es necesario, y el usuario lo quiere, y todo es importante y sin perder la trazabilidad. Y lo quiere desde cualquier perspectiva y con cualquier agregación. Además, existen infinidad de indicadores (retrasos, unidades pendientes de...). La solución a esto pasa, necesariamente, por un modelo ROLAP. Olvídate de los cubitos.
+</span>
+                </li>
+                <li>
+                  <b>Una</b>
+                  <span></span>
+                  <b>aplicación de recursos humanos</b>
+                  <span>. En este caso, suelen ser bases de datos minúsculas (¿1.000 empleados? ¿10.000? Da igual). Tenemos nóminas que se pagan mensualmente, y tenemos la historia de cada empleado: sus distintos contratos, su bajas por enfermedad, sus maternidades, su historial de fichajes, su periodos de vacaciones, sus evaluaciones. Etc.). ¿Acaso alguien recomendaría poner esta información en un cubo? Aquí, no existe un “dato” agregable que consultar. Por supuesto que existen indicadores y se pueden definir KPI. Pero no es eso lo que principalmente pedirá el manager de RRHH.
+</span>
+                </li>
+                <li>
+                  <b>Un sistema de control de la producción</b>
+                  <span>. En este caso, tenemos máquinas y operarios que fabrican piezas, y disponemos de la historia de las piezas (fechas, materiales, incidencias,...) y de las máquinas (calibración, periodos de operación, operarios, revisiones...). Por supuesto, querremos calcular la producción diaria, o medir la calidad del producto resultante... Pero el manager querrá (¡necesitará!) mucha más información. A este manager no le des un cubito. En serio, sus datos no caben en un cubo.
+</span>
+                </li>
+              </ul>
+              <p>
+                <span>Es decir, las limitaciones de los cubos no se refieren sólo al volumen de información que pueden gestionar, o a la complejidad de sus procesos de carga. Los cubos presentan “limitaciones estructurales” en las cosas que pueden meterse eficientemente. Si no, </span>
+                <b>¿Por qué pensáis que los anteriores ejemplos raramente se entregan a los usuarios en forma de cubo?
+</b>
+              </p>
+              <p style="text-align:center">
+                <img src="https://www.businessintelligence.info/resources/imagenes-bi/limitaciones-estructurales-molap.png" alt="El modelo de negocio no siempre cabe en un la sencillez de un cubo " title="El modelo de negocio no siempre cabe en un la sencillez de un cubo " width="195" height="200" />
+              </p>
+              <p>Creo que lo que diferencia estos ejemplos con el cubo de ventas es que para analizar las ventas basta y sobra con unos disponer de unos pocos indiciadores (unidades, importes, costes y márgenes,...) desde unas pocas perspectivas (tiempo, producto, punto de venta), mientras en los otros ejemplos los indicadores no son suficiente. Es necesario conocer toda la historia, a nivel detallado, con sus fechas, atributos, descripciones textuales, códigos, y manteniendo la “trazabilidad”. Tal vez sea eso lo que diferencia unos casos de otros: Todas las ventas son iguales, pero cada viaje, cada trabajador, y cada pieza fabricada es única, y tiene su propia historia. 
+</p>
+              <p>Estas diferencias conceptuales provocan diferencias en el tipo de informe y análisis que se realiza:
+</p>
+              <ul>
+                <li>Una tabla dinámica puede ser suficiente para analizar las ventas. Los gerentes comerciales tienen esta suerte.
+</li>
+                <li>
+                  <span>Pero un informe de SCM, de RRHH, o de producción siempre consistirá en varios bloques de información –tablas o gráficos – que se repetirán en distintas “secciones”... ¿Cómo haces eso con un cubo? ¿Y por qué vamos a privar a estos gerentes de disponer de un acceso fácil, rápido y analítico a </span>
+                  <b>sus datos</b>
+                  <span>? Y digo más: ¿Quién coño es IT para decidir cómo deben estos managers hacer sus informes? ¡¡o para decidir si necesitan informes predefinidos o si necesitan </span>
+                  <b>autonomía</b>
+                  <span> para el acceso y análisis de la información!!
+</span>
+                </li>
+              </ul>
+              <p>Y provocan diferencias en los modelos de datos:
+</p>
+              <ul>
+                <li>Las bases de datos comerciales se modelizan en estrella o en copo de nieve... 
+</li>
+                <li>
+                  <span>Y el resto se modelizan como haga falta. Sí: La bases de datos relacionales son las más flexibles, y las que se adaptan a cualquier situación de negocio imaginable. El señor </span>
+                  <a href="http://es.wikipedia.org/wiki/Edgar_Frank_Codd">Edgar F. Codd</a>
+                  <span> se revolvería en su tumba si pretendiésemos prescindir de las bases de datos relacionales para modelizar todas estas cuestiones.
+</span>
+                </li>
+              </ul>
+              <p>
+                <span>Los lectores habituales saben que no es la primera vez que cuestiono los modelos MOLAP. </span>
+                <a href="https://www.businessintelligence.info/definiciones/cubos-olap.html">Lo hice en mi quinto artículo</a>
+                <span>. Y lo he hecho en </span>
+                <a href="https://www.businessintelligence.info/mercado/mejor-basededatos-multidimensional-olap.html">otras ocasiones</a>
+                <span>. Por supuesto, es una opinión compartida por otros profesionales:
+</span>
+              </p>
+              <ul>
+                <li>
+                  <a href="http://blogs.forrester.com/boris_evelson/11-01-25-when_rolap_is_not_a_rolap">When ROLAP Is Not A ROLAP</a>
+                  <span></span>
+                </li>
+                <li>
+                  <a href="http://www.forrester.com/rb/Research/olap_in_fashion_or_old-fashioned/q/id/46967/t/2">OLAP: In Fashion Or Old-Fashioned?</a>
+                  <span></span>
+                </li>
+                <li>
+                  <a href="http://informatria.blogspot.com/2011/01/cubos-y-estrellas.html">Cubos y estrellas</a>
+                  <span></span>
+                </li>
+                <li>
+                  <a href="http://www.dataprix.com/rolap-vs-molap">ROLAP vs MOLAP</a>
+                  <span></span>
+                </li>
+                <li>
+                  <a href="http://businessintelligence.ittoolbox.com/documents/advantagesdisadvantages-of-molap-rolap-and-holap-15897">Advantages/Disadvantages of MOLAP, ROLAP and HOLAP</a>
+                  <span></span>
+                </li>
+                <li>
+                  <a href="http://en.wikipedia.org/wiki/ROLAP">Wikipedia: ROLAP</a>
+                  <span></span>
+                </li>
+              </ul>
+              <p>
+                <span>No sé si las </span>
+                <a href="https://www.businessintelligence.info/mercado/microsoft-vs-bingo-intelligence.html">críticas</a>
+                <span> vienen por la sencilla razón de que ahora tengo más lectores, o por el tono comercial del artículo en cuestión. Tal vez sea que esta vez he particularizado en una base de datos (MSAS) con una importante comunidad de usuarios (¿fanboys?) :-)
+</span>
+              </p>
+              <p>En cualquier caso, gracias por vuestros comentarios. Toda crítica es bienvenida.
+</p>
+              <p>PD: El título está puesto sólo para provocar. Por supuesto, no creo que sean una basura.
+</p>
+            </div>
+            <div class="comentarios">
+              <div id="disqus_thread"></div>
+              <script>
+            		var disqus_config = function () {
+            			this.page.url = 'https://www.businessintelligence.info/definiciones/limitaciones-estructurales-molap.html'
+            			this.page.identifier = 'bifacil280'
+            		};	
+            		(function() { 
+            			var d = document, s = d.createElement('script');
+            			s.src = '//bifacil.disqus.com/embed.js';
+            			s.setAttribute('data-timestamp', +new Date());
+            			(d.head || d.body).appendChild(s);
+            		})();
+            	</script>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="span3">
+          <ul>
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="../archivo.html">Archivo</a>
+            </li>
+            <li>
+              <a href="../categorias.html">Categorías</a>
+            </li>
+            <li>
+              <a href="../sobre-el-blog/contacto.html">Contacto</a>
+            </li>
+            <li>
+              <a href="../sobre-el-blog/enlaces.html">Enlaces</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span3">
+          <div class="rrss-footer">
+            <a href="https://www.linkedin.com/company/businessintelligence" target="_blank" class="fa fa-linkedin"></a>
+            <a href="http://twitter.com/bifacil" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/c/BusinessIntelligenceInfo" target="_blank" class="fa fa-youtube"></a>
+            <a href="https://www.facebook.com/CronoBusinessIntelligence" target="_blank" class="fa fa-facebook"></a>
+          </div>
+        </div>
+        <div class="span3">
+          <section class="newsletter">
+            <p>¿Quieres recibir los artículos de este blog por correo electrónico? No te pierdas ni un artículo. Mantente informado sobre lo que ocurre en el mundo del Business Intelligence. 
+<a href="../subscribe.html">¡Síguenos!</a></p>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <script src="../resources/js/scripts.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-3456231-2");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  </body>
+</html>

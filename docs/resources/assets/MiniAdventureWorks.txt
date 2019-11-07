@@ -1,0 +1,32 @@
+DATABASE (
+  Name='Demo AdventureWorks para Business Intelligence fácil',
+  Snowflakes=(
+    SNOWFLAKE (
+      Name='FactResellerSales',
+      Definition=(
+        SELECT count(*)
+        FROM FactResellerSales sales
+        INNER JOIN DimProduct USING ProductKey
+        INNER JOIN DimProductSubCategory USING DimProduct(ProductSubcategoryKey)
+        INNER JOIN DimProductCategory USING DimProductSubCategory(ProductCategoryKey)
+        INNER JOIN DimReseller USING ResellerKey
+        INNER JOIN DimGeography USING DimReseller(GeographyKey)
+        INNER JOIN DimDate USING (OrderDateKey DateKey)
+      )
+    ),
+    SNOWFLAKE (
+      Name='FactInternetSales',
+      Definition=(
+        SELECT count(*)
+        FROM FactInternetSales isales
+        INNER JOIN DimProduct USING ProductKey
+        INNER JOIN DimProductSubCategory USING DimProduct(ProductSubcategoryKey)
+        INNER JOIN DimProductCategory USING DimProductSubCategory(ProductCategoryKey)
+        INNER JOIN DimDate USING (OrderDateKey DateKey)
+        INNER JOIN DimCustomer ON (isales.CustomerKey=DimCustomer.CustomerKey)
+        INNER JOIN DimGeography ON (DimCustomer.GeographyKey=DimGeography.GeographyKey)
+      )
+    )
+  )
+)
+

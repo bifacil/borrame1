@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html []>
+<html lang="es" data-authenticationTime="1 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="15 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="5" data-evaluationTime="8" data-queryTime="0" data-evaluationsCount="189" data-queryCount="1" data-query="definiciones/una-critica-al-lenguaje-sql-ii.html">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true" />
+    <title>Una crítica al lenguaje SQL (parte 2)</title>
+    <meta name="description" content="Estas características del SQL son las que explican buena parte de los costes de desarrollo. Si el SQL fuera más imperativo, más legible, más fácil de escribir, el uso de herramientas ETL no estaría justificado, ya que los desarrollos serían mucho más fáciles." />
+    <meta name="keywords" content="Business Intelligence,datawarehouse,crono,BI,cuadro de mando,Barcelona,España" />
+    <meta name="y_key" content="f9df80cf3ef594d6" />
+    <meta name="google-site-verification" content="w6gZESf_S3APOXfjzJMrnLIiA9bcWeRPJSTjlB-8Mfg" />
+    <meta name="msvalfidate.01" content="401B0C3C6EEDE1AC271C85838378209E" />
+    <link href="../resources/images/favicon.png" rel="shortcut icon" />
+    <link href="../resources/js/animations/animate.min.css" rel="stylesheet" />
+    <link href="../resources/css/fontawesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="../resources/css/iconfontcustom/icon-font-custom.css" rel="stylesheet" />
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../resources/css/base.css" rel="stylesheet" />
+    <link href="../resources/css/style.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet" />
+    <link href="https://www.businessintelligence.info/rss.xml" rel="alternate" type="application/rss+xml" title="(RSS)" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" />
+    <link href="https://www.businessintelligence.info/definiciones/una-critica-al-lenguaje-sql-ii.html" rel="canonical" />
+    <script src="../resources/js/jquery-2.1.1.min.js"></script>
+    <script src="../resources/js/viewport/jquery.viewport.js"></script>
+    <script>
+      (function() {
+        var cx = '001840061174465826245:yxey5gkicrq';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header" class="stuck">
+        <div class="row">
+          <div class="span3">
+            <div id="logo">
+              <a href="../index.html">
+                <img src="../resources/images/Logo-bif-crono.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="span9">
+            <a href="#" id="mobile-menu-trigger">
+              <i class="fa fa-bars"></i>
+            </a>
+            <nav>
+              <ul class="sf-menu fixed" id="menu">
+                <li>
+                  <div class="buscador_google">
+                    <div class="gcse-search"></div>
+                  </div>
+                </li>
+                <li>
+                  <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                  <a href="../archivo.html">Archivo</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="row" id="banner">
+        <div class="span10 banner">
+          <a href="https://businessintelligence.es" alt="Business Intelligence">
+            <img src="../resources/images/banner1.jpg" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <main class="span10 post">
+          <article>
+            <div>
+              <div class="up-title">
+                <h1>Una crítica al lenguaje SQL (parte 2)</h1>
+                <a class="catlink" href="../categorias.html#definiciones">Definiciones</a>
+              </div>
+              <div class="fecha">miércoles, 13 de marzo de 2013</div>
+              <p>
+                <span>En un </span>
+                <a href="https://www.businessintelligence.info/definiciones/una-critica-al-lenguaje-sql.html">artículo anterior</a>
+                <span> comentaba que el lenguaje SQL era un excesivamente  reiterativo, y ponía algunos ejemplos muy concretos:
+</span>
+              </p>
+              <ul>
+                <li>
+                  <span>Las mismas </span>
+                  <b>fórmulas y expresiones</b>
+                  <span> se repiten una y otra vez en las sentencias (en las columnas del </span>
+                  <i>SELECT</i>
+                  <span>, en los </span>
+                  <i>GROUP BY</i>
+                  <span>,…). Si la fórmula es compleja rápidamente se obtiene código difícil de mantener.
+</span>
+                </li>
+                <li>
+                  <span>Los mismos </span>
+                  <b>JOINS</b>
+                  <span> se repiten en todas las sentencias. A pesar de que la relación entre las tablas es un conocimiento estático -propio del modelo de datos- debemos repetir las mismas relaciones PK-FK una y otra vez, una y otra vez, una y otra vez… 
+</span>
+                </li>
+                <li>
+                  <b>Operaciones entre filas. </b>
+                  <span>Utilizando SQL es muy sencillo hacer operaciones entre columnas (calcular el precio medio a partir del importe y las unidades, por ejemplo), pero es farragoso hacer operaciones entre filas (como comparar las ventas de este año respecto las del año anterior). 
+</span>
+                </li>
+              </ul>
+              <p>
+                <span>En </span>
+                <a href="https://www.businessintelligence.info/definiciones/una-critica-al-lenguaje-sql.html">aquella ocasión</a>
+                <span> utilicé la estrella de FactResellerSales (de “Adventure Works DW”) para mostrar los ejemplos. Hoy, además, utilizaré las tablas de la estrella de “ventas de internet”:
+</span>
+              </p>
+              <p style="text-align:center">
+                <img src="https://www.businessintelligence.info/resources/imagenes-bi/ejemplo-fact-internet-sales.png" alt="Para el ejemplo de hoy, utilizaremos la estrella de FactIntenertSales" title="Para el ejemplo de hoy, utilizaremos la estrella de FactIntenertSales" width="586" height="445" />
+              </p>
+              <h3>Operaciones entre distintas tablas de hecho</h3>
+              <p>Una necesidad tan común como comparar las ventas respecto el presupuesto no es trivial resolverla con SQL. El lenguaje SQL es bueno agrupando, ordenando, y filtrando valores de un conjunto de datos (una tabla de hechos con sus tablas de dimensión, en concreto), pero si queremos comparar los valores 2 tablas de hecho, tendremos que hacer 2 consultas.
+</p>
+              <p>Por ejemplo, si queremos comparar o sumar las ventas de internet con las ventas en tiendas tendremos que escribir cosas así:
+</p>
+              <pre>
+                <code>-- Ejemplo 5
+
+WITH
+isales1 AS (
+  SELECT
+    DimDate.CalendarYear AS CalendarYear,
+    sum(isales.SalesAmount) AS ventasInternet
+  FROM FactInternetSales isales
+  INNER JOIN DimDate ON (isales.OrderDateKey=DimDate.DateKey)
+  INNER JOIN DimCustomer ON (isales.CustomerKey=DimCustomer.CustomerKey)
+  INNER JOIN DimGeography ON (DimCustomer.GeographyKey=DimGeography.GeographyKey)
+  WHERE DimGeography.SpanishCountryRegionName='Francia'
+  GROUP BY DimDate.CalendarYear
+),
+sales1 AS (
+  SELECT
+    DimDate.CalendarYear AS CalendarYear,
+    sum(sales.SalesAmount) AS ventasReseller
+  FROM FactResellerSales sales
+  INNER JOIN DimReseller ON (sales.ResellerKey=DimReseller.ResellerKey)
+  INNER JOIN DimGeography ON (DimReseller.GeographyKey=DimGeography.GeographyKey)
+  INNER JOIN DimDate ON (sales.OrderDateKey=DimDate.DateKey)
+  WHERE DimGeography.SpanishCountryRegionName='Francia'
+  GROUP BY DimDate.CalendarYear
+),
+COMUN AS (
+  SELECT DISTINCT CalendarYear FROM isales1
+  UNION SELECT DISTINCT CalendarYear FROM sales1
+)
+SELECT
+  COMUN.CalendarYear,
+  isales1.ventasInternet AS ventasInternet,
+  sales1.ventasReseller AS ventasReseller,
+  coalesce(sales1.ventasReseller,0)+coalesce(isales1.ventasInternet,0) AS ventas
+FROM COMUN
+LEFT JOIN isales1 ON COMUN.CalendarYear=isales1.CalendarYear
+LEFT JOIN sales1 ON COMUN.CalendarYear=sales1.CalendarYear
+
+</code>
+              </pre>
+              <p>Por supuesto, en entornos Business Intelligence, estas necesidades no son excepcionales. Tanto los usuarios (desde sus herramientas de Query&amp;Reporting) como los técnicos que crean y mantienen los procesos ETL de carga del Data Warehouse,  hacen este tipo de consultas habitualmente (o no las saben hacer, y hacen cosas peores…).
+</p>
+              <h3>La punta del iceberg</h3>
+              <p>Tal vez las cosas que he comentado en este artículo te han parecido minucias o cosas inevitables.  En mi opinión, son solo la punta del iceberg de un problema muy gordo. 
+</p>
+              <p>
+                <span>He analizado solo las sentencias </span>
+                <b>SELECT</b>
+                <span> pero los mismos problemas, y de manera mucho más pronunciada, se repiten en las instrucciones de manipulación de la información </span>
+                <b>(UPDATES, INSERTS y DELETES)</b>
+                <span>. Necesitaría un blog entero solo para hablar de ello… Piensa en el código necesario para hacer una carga de una dimensión SCD, por ejemplo…
+</span>
+              </p>
+              <p>En mi opinión, estas características del SQL son las que explican buena parte de los costes de desarrollo. Si el SQL fuera más imperativo, más legible, más fácil de escribir, el uso de herramientas ETL no estaría justificado, ya que los desarrollos serían mucho más fáciles.
+</p>
+              <p>Porque el SQL es como es, nacieron las herramientas de Query &amp; Reporting, y nacieron posteriormente las herramientas ETL.  Sin embargo, las herramientas ETL solo han cumplido parcialmente sus promesas. A pesar de su sofisticación, los procesos ETL siguen representando el 70% de los costes de implantación de un sistema Business Intelligence.
+</p>
+              <p>En otros ámbitos de la informática la evolución ha sido muy diferente. Los lenguajes han evolucionado muchísimo y han aparecido nuevos dialectos y sabores. Gracias a ello, un estudiante hoy en día puede hacer una aplicación en 2 tardes que hace 3 décadas hubiese necesitado un ejército de programadores de IBM… ¿Por qué la evolución del SQL ha sido tan limitada? No lo sé, pero sé que pagamos las consecuencias de ello…
+</p>
+              <h3>Crono SQL</h3>
+              <p>Como supongo que habrás notado, las sentencias SQL que aparecen en este artículo no las he escrito directamente. He utilizado el generador de consultas de Crono Analytics.  
+</p>
+              <p>
+                <span>Si lees este blog, seguramente sepas que </span>
+                <a href="http://demo.crono.net/">Crono Analytics</a>
+                <span> es una solución de Business Intelligence fácil de usar. Al igual que todas las herramientas de BI, lo que hacemos es convertir las consultas de los usuarios al lenguaje SQL, pero nosotros tenemos un “truco”….  Internamente, Crono Analytics utiliza el lenguaje Crono SQL que resuelve las problemáticas que describo en este artículo. Hablaré de ello en la <a href="https://www.businessintelligence.info/definiciones/una-critica-al-lenguaje-sql-reloaded.html">tercera parte de esta serie</a>.
+</span>
+              </p>
+              <p>
+                <span>PD: Si te ha gustado este artículo, y no quieres perderte la finalización de esta serie, suscríbete al </span>
+                <a href="https://www.businessintelligence.info/subscribe.html">newsletter de Business Intelligence fácil</a>
+                <span>.
+</span>
+              </p>
+            </div>
+            <div class="comentarios">
+              <div id="disqus_thread"></div>
+              <script>
+            		var disqus_config = function () {
+            			this.page.url = 'https://www.businessintelligence.info/definiciones/una-critica-al-lenguaje-sql-ii.html'
+            			this.page.identifier = 'bifacil324'
+            		};	
+            		(function() { 
+            			var d = document, s = d.createElement('script');
+            			s.src = '//bifacil.disqus.com/embed.js';
+            			s.setAttribute('data-timestamp', +new Date());
+            			(d.head || d.body).appendChild(s);
+            		})();
+            	</script>
+            </div>
+          </article>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="span3">
+          <ul>
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="../archivo.html">Archivo</a>
+            </li>
+            <li>
+              <a href="../categorias.html">Categorías</a>
+            </li>
+            <li>
+              <a href="../sobre-el-blog/contacto.html">Contacto</a>
+            </li>
+            <li>
+              <a href="../sobre-el-blog/enlaces.html">Enlaces</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span3">
+          <div class="rrss-footer">
+            <a href="https://www.linkedin.com/company/businessintelligence" target="_blank" class="fa fa-linkedin"></a>
+            <a href="http://twitter.com/bifacil" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/c/BusinessIntelligenceInfo" target="_blank" class="fa fa-youtube"></a>
+            <a href="https://www.facebook.com/CronoBusinessIntelligence" target="_blank" class="fa fa-facebook"></a>
+          </div>
+        </div>
+        <div class="span3">
+          <section class="newsletter">
+            <p>¿Quieres recibir los artículos de este blog por correo electrónico? No te pierdas ni un artículo. Mantente informado sobre lo que ocurre en el mundo del Business Intelligence. 
+<a href="../subscribe.html">¡Síguenos!</a></p>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <script src="../resources/js/scripts.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-3456231-2");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  </body>
+</html>
