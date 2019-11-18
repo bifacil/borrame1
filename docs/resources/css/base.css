@@ -416,6 +416,8 @@ h3 {
 		vertical-align: top;
 	}
 
+	
+
 	table th {
 		border-top: 0;
 		font-weight: 700;
@@ -1287,3 +1289,5 @@ h3 {
 		float: none; 	/* 1 */
 		margin-left: 0; /* 2 */
 	}
+
+
