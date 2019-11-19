@@ -1,4 +1,4 @@
-﻿<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" data-authenticationTime="1 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="27 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="43" data-evaluationTime="23" data-queryTime="0" data-evaluationsCount="43" data-queryCount="0">
+﻿<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" data-authenticationTime="1 ms" data-authorizeRequestTime="0 ms" data-engineCreationTime="1 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="12" data-evaluationTime="6" data-queryTime="0" data-evaluationsCount="43" data-queryCount="0">
   <channel>
     <title>Business Intelligence fácil</title>
     <atom:link href="https://www.businessintelligence.info/rss.xml" rel="self" type="application/rss+xml" />
