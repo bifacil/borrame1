@@ -237,17 +237,44 @@ nav li svg{
 		font-size:16px;
 	}
 
-	footer section.newsletter a{
-  		color: #f39300!important;
-	    text-decoration: underline!important;
-	    border-radius: 2px;
-	    padding: 3px;
-	    background-color: white;
-	    font-weight: bold !important;
+	.divBoton{
+		vertical-align: middle;
+		display: flex;
+		justify-content: flex-end;
+
+	}
+
+		footer .divBoton *:hover {
+			color: white !important;
+			text-decoration: none ;
+		}
+	
+
+		.divBoton >a>div{
+			border: 2.5px solid #5c9fe4;
+			height: 27px;
+			
 		}
 
+		.divBoton * {
+			vertical-align: middle;
+		}
 
-	footer section.newsletter a:hover{
+		.divBoton img{
+			width: 20px;
+			margin-left: 5px;
+		}
+
+		.divBoton p{
+
+		    padding: 3px;
+		    font-weight: bold !important;
+		    display: inline;
+		}
+	
+
+
+	footer section.newsletter li a:hover{
 		text-decoration: underline!important;
 	}
 
@@ -295,6 +322,10 @@ nav li svg{
 	.textNewsletter{
 		font-size: 19px !important;
 	}
+
+.divBoton{
+
+}
 
 /* ==========================================================================
    =Blog
@@ -359,7 +390,7 @@ nav li svg{
 		/*font-family: "FontAwesome";*/
 		font-size: 60px;
 		line-height: 60px;
-		content: "";
+		content: "❞";
 	}
 
 	@media (max-width: 767px) {
