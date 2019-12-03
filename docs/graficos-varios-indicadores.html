@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html []>
-<html data-authenticationTime="0 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="62 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="6" data-evaluationTime="1" data-queryTime="0" data-evaluationsCount="215" data-queryCount="0" data-query="index.html">
+<html data-authenticationTime="0 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="62 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="121" data-evaluationTime="1" data-queryTime="348" data-evaluationsCount="223" data-queryCount="8" data-query="graficos-varios-indicadores.html">
   <head>
-    <title></title>
-    <meta name="title" content="" />
+    <title>Gráficos de varios indicadores</title>
+    <meta name="title" content="Gráficos de varios indicadores" />
     <meta name="application-name" content="Crono Web" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -210,9 +210,155 @@
           <div class="row">
             <div id="content" class="content col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
               <div class="page-header">
-                <h1></h1>
+                <h1>Gráficos de varios indicadores</h1>
               </div>
-              <div></div>
+              <div>
+                <h3>Gráfico de barras</h3>
+                <div id="columnchart1">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Bar(document.getElementById('columnchart1')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades 2011', 'Unidades 2012'],
+    ['ABANDO', 42936, 45513],
+    ['AV. ANDALUCIA', 30224, 30358],
+    ['AV. PECHINA', 59704, 55742],
+    ['BARCELONA II', 60789, 56846],
+    ['BARCELONA MAR', null, 35550],
+    ['BERNABEU', 32348, 32896]]), google.charts.Bar.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de barras "
+      }
+    }))});</script>
+                </div>
+                <h3>Gráfico de barras apiladas</h3>
+                <div id="columnchart2">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Bar(document.getElementById('columnchart2')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades 2011', 'Unidades 2012'],
+    ['ABANDO', 42936, 45513],
+    ['AV. ANDALUCIA', 30224, 30358],
+    ['AV. PECHINA', 59704, 55742],
+    ['BARCELONA II', 60789, 56846],
+    ['BARCELONA MAR', null, 35550],
+    ['BERNABEU', 32348, 32896]]), google.charts.Bar.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de barras apiladas"
+      },
+      "isStacked": "true"
+    }))});</script>
+                </div>
+                <h3>Gráfico de barras horizontales</h3>
+                <div id="columnchart3">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Bar(document.getElementById('columnchart3')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades 2011', 'Unidades 2012'],
+    ['BARCELONA II', 60789, 56846],
+    ['BARCELONA MAR', null, 35550],
+    ['BERNABEU', 32348, 32896]]), google.charts.Bar.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de barras horizontales"
+      },
+      "hAxis": {
+        "title": "Esto son las tiendas"
+      },
+      "bars": "horizontal"
+    }))});</script>
+                </div>
+                <h3>Gráfico de barras horizontales apiladas</h3>
+                <div id="columnchart4">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Bar(document.getElementById('columnchart4')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades 2011', 'Unidades 2012'],
+    ['BARCELONA II', 60789, 56846],
+    ['BARCELONA MAR', null, 35550],
+    ['BERNABEU', 32348, 32896]]), google.charts.Bar.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de barras horizontales"
+      },
+      "hAxis": {
+        "title": "Esto son las tiendas"
+      },
+      "bars": "horizontal",
+      "isStacked": "true"
+    }))});</script>
+                </div>
+                <h3>Gráfico de líneas</h3>
+                <div id="columnchart5">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Line(document.getElementById('columnchart5')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Agosto 2012', 'Septiembre 2012'],
+    ['ABANDO', 3026, 4341],
+    ['AV. ANDALUCIA', 1857, 3101],
+    ['AV. PECHINA', 3738, 7397],
+    ['BARCELONA II', 4122, 6853],
+    ['BARCELONA MAR', 2477, 4578],
+    ['BERNABEU', 2957, 2733]]), google.charts.Line.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico líneas"
+      },
+      "hAxis": {
+        "title": "Esto son las tiendas"
+      }
+    }))});</script>
+                </div>
+                <h3>Gráfico de líneas curvas</h3>
+                <div id="columnchart6">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(function(){new google.visualization.LineChart(document.getElementById('columnchart6')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Agosto 2012', 'Septiembre 2012'],
+    ['ABANDO', 3026, 4341],
+    ['AV. ANDALUCIA', 1857, 3101],
+    ['AV. PECHINA', 3738, 7397],
+    ['BARCELONA II', 4122, 6853],
+    ['BARCELONA MAR', 2477, 4578],
+    ['BERNABEU', 2957, 2733]]), {
+      "chart": {
+        "title": "Gráfico líneas"
+      },
+      "hAxis": {
+        "title": "Esto son las tiendas"
+      },
+      "curveType": "function"
+    })});</script>
+                </div>
+                <h3>Gráfico de areas</h3>
+                <div id="columnchart7">
+                  <script>    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(function(){new google.visualization.AreaChart(document.getElementById('columnchart7')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Agosto 2012', 'Septiembre 2012'],
+    ['ABANDO', 3026, 4341],
+    ['AV. ANDALUCIA', 1857, 3101],
+    ['AV. PECHINA', 3738, 7397],
+    ['BARCELONA II', 4122, 6853],
+    ['BARCELONA MAR', 2477, 4578],
+    ['BERNABEU', 2957, 2733]]), {
+      "chart": {
+        "title": "Gráfico de áreas"
+      }
+    })});</script>
+                </div>
+                <h3>Gráfico de areas apiladas</h3>
+                <div id="columnchart8">
+                  <script>    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(function(){new google.visualization.AreaChart(document.getElementById('columnchart8')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Agosto 2012', 'Septiembre 2012'],
+    ['ABANDO', 3026, 4341],
+    ['AV. ANDALUCIA', 1857, 3101],
+    ['AV. PECHINA', 3738, 7397],
+    ['BARCELONA II', 4122, 6853],
+    ['BARCELONA MAR', 2477, 4578],
+    ['BERNABEU', 2957, 2733]]), {
+      "chart": {
+        "title": "Gráfico de áreas"
+      },
+      "isStacked": "true"
+    })});</script>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html []>
-<html data-authenticationTime="0 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="62 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="6" data-evaluationTime="1" data-queryTime="0" data-evaluationsCount="215" data-queryCount="0" data-query="index.html">
+<html data-authenticationTime="0 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="63 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="73" data-evaluationTime="1" data-queryTime="182" data-evaluationsCount="219" data-queryCount="4" data-query="graficos-dispersion.html">
   <head>
-    <title></title>
-    <meta name="title" content="" />
+    <title>Gráficos de dispersión</title>
+    <meta name="title" content="Gráficos de dispersión" />
     <meta name="application-name" content="Crono Web" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -210,9 +210,107 @@
           <div class="row">
             <div id="content" class="content col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
               <div class="page-header">
-                <h1></h1>
+                <h1>Gráficos de dispersión</h1>
               </div>
-              <div></div>
+              <div>
+                <h3>Gráfico de puntos (X-Y)</h3>
+                <div id="columnchart1">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'scatter']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Scatter(document.getElementById('columnchart1')).draw(google.visualization.arrayToDataTable(
+    [['Unidades 2011', 'Unidades 2012'],
+    [59704, 55742],
+    [30224, 30358],
+    [41463, 41175],
+    [42936, 45513],
+    [66562, 63627],
+    [31180, 34347],
+    [60789, 56846],
+    [null, 35550],
+    [32348, 32896],
+    [59480, 55077],
+    [50355, 47063],
+    [38232, 41582]]), google.charts.Scatter.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de puntos",
+        "subtitle": "subtitulo..."
+      },
+      "hAxis": {
+        "title": "Esto es el exe X"
+      },
+      "vAxis": {
+        "title": "Esto es el eje Y"
+      }
+    }))});</script>
+                </div>
+                <h3>Gráfico de puntos (X-Y)</h3>
+                <div id="columnchart2">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'scatter']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Scatter(document.getElementById('columnchart2')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades 2011'],
+    ['AV. PECHINA', 59704],
+    ['AV. ANDALUCIA', 30224],
+    ['RETIRO', 41463],
+    ['ABANDO', 42936],
+    ['UNIVERSITAT', 66562],
+    ['SEVILLA CENTRO', 31180],
+    ['BARCELONA II', 60789],
+    ['BERNABEU', 32348],
+    ['VAGUADA', 59480],
+    ['PUERTO', 50355],
+    ['SAN FRANCISCO', 38232]]), google.charts.Scatter.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de puntos (discreto)"
+      }
+    }))});</script>
+                </div>
+                <h3>Gráfico de puntos (X-Y)</h3>
+                <div id="columnchart3">
+                  <script>    google.charts.load('current', {packages: ['corechart', 'scatter']});
+    google.charts.setOnLoadCallback(function(){new google.charts.Scatter(document.getElementById('columnchart3')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades 2011', 'Unidades 2012'],
+    ['AV. PECHINA', 59704, 55742],
+    ['AV. ANDALUCIA', 30224, 30358],
+    ['RETIRO', 41463, 41175],
+    ['ABANDO', 42936, 45513],
+    ['UNIVERSITAT', 66562, 63627],
+    ['SEVILLA CENTRO', 31180, 34347],
+    ['BARCELONA II', 60789, 56846],
+    ['BARCELONA MAR', null, 35550],
+    ['BERNABEU', 32348, 32896],
+    ['VAGUADA', 59480, 55077],
+    ['PUERTO', 50355, 47063],
+    ['SAN FRANCISCO', 38232, 41582]]), google.charts.Scatter.convertOptions(
+    {
+      "chart": {
+        "title": "Gráfico de puntos (discreto)"
+      }
+    }))});</script>
+                </div>
+                <h3>Gráfico de burbujas</h3>
+                <div id="columnchart4">
+                  <script>    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(function(){new google.visualization.BubbleChart(document.getElementById('columnchart4')).draw(google.visualization.arrayToDataTable(
+    [['Tienda', 'Unidades', 'Importe', 'Zona', 'Precio'],
+    ['BERNABEU', 124656, 3628322.49, 'CENTRO', 0.0343563727710433],
+    ['RETIRO', 154943, 4232188.79, 'CENTRO', 0.0366106068722894],
+    ['VAGUADA', 218934, 5594563.45, 'CENTRO', 0.0391333482865406],
+    ['AV. PECHINA', 151021, 3523786.93, 'ESTE', 0.0428575856032249],
+    ['BARCELONA II', 220206, 5825841.42, 'ESTE', 0.0377981452162493],
+    ['BARCELONA MAR', 35550, 829626.71, 'ESTE', 0.0428505972282402],
+    ['PUERTO', 181119, 4593685, 'ESTE', 0.0394278231964099],
+    ['UNIVERSITAT', 247220, 6540248.51, 'ESTE', 0.0377997869074856],
+    ['ABANDO', 166525, 5046790.34, 'NORTE', 0.0329962191375677],
+    ['SAN FRANCISCO', 97453, 3010744.79, 'NORTE', 0.0323684027698675],
+    ['AV. ANDALUCIA', 111816, 2909347.97, 'SUR', 0.0384333538486976],
+    ['SEVILLA CENTRO', 130812, 3205831.6, 'SUR', 0.0408043891014113]]), {
+      "chart": {
+        "title": "Gráfico de burbujas"
+      }
+    })});</script>
+                </div>
+              </div>
             </div>
           </div>
         </div>
