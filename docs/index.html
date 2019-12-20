@@ -1,202 +1,567 @@
 ﻿<!DOCTYPE html []>
-<html lang="es" data-authenticationTime="1 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="39 ms" data-engineVariablesTime="1 ms" data-responseCreationTime="162" data-evaluationTime="12" data-queryTime="0" data-evaluationsCount="232" data-queryCount="0" data-query="index.html">
+<html data-authenticationTime="0 ms" data-authorizeRequestTime="1 ms" data-engineCreationTime="62 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="6" data-evaluationTime="1" data-queryTime="0" data-evaluationsCount="215" data-queryCount="0" data-query="index.html">
   <head>
+    <title></title>
+    <meta name="title" content="" />
+    <meta name="application-name" content="Crono Web" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true" />
-    <title>Business Intelligence fácil</title>
-    <meta name="description" content="Blog sobre Business Intelligence con más de 200 artículos con comparativas, tendencias, opinión y estudios de mercado." />
-    <meta name="keywords" content="Business Intelligence,datawarehouse,crono,BI,cuadro de mando,Barcelona,España" />
-    <meta name="y_key" content="f9df80cf3ef594d6" />
-    <meta name="google-site-verification" content="w6gZESf_S3APOXfjzJMrnLIiA9bcWeRPJSTjlB-8Mfg" />
-    <meta name="msvalfidate.01" content="401B0C3C6EEDE1AC271C85838378209E" />
-    <link href="resources/images/favicon.png" rel="shortcut icon" />
-    <link href="resources/js/animations/animate.min.css" rel="stylesheet" />
-    <link href="resources/css/fontawesome/font-awesome.min.css" rel="stylesheet" />
-    <link href="resources/css/iconfontcustom/icon-font-custom.css" rel="stylesheet" />
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="resources/css/base.css" rel="stylesheet" />
-    <link href="resources/css/style.css" type="text/css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet" />
-    <link href="https://www.businessintelligence.info/rss.xml" rel="alternate" type="application/rss+xml" title="(RSS)" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" />
-    <link href="https://www.businessintelligence.info/index.html" rel="canonical" />
-    <script src="resources/js/jquery-2.1.1.min.js"></script>
-    <script src="resources/js/viewport/jquery.viewport.js"></script>
-    <script>
-      (function() {
-        var cx = '001840061174465826245:yxey5gkicrq';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-            '//cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-      })();
-    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://bifacil.github.io/resources.crono.net/css/bootstrap-callout.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://bifacil.github.io/resources.crono.net/js/behigh-bs-enhancement/dropdowns-enhancement.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://bifacil.github.io/resources.crono.net/js/behigh-bs-enhancement/dropdowns-enhancement.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+    <link href="https://bifacil.github.io/resources.crono.net/img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="https://bifacil.github.io/resources.crono.net/ultra/css/ultra.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://bifacil.github.io/resources.crono.net/css/main.css" />
+    <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/resizer.js" type="text/javascript"></script>
+    <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="https://bifacil.github.io/resources.crono.net/ultra/js/ultra.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1' type='text/css' media='all' />
+
+
   </head>
-  <body>
-    <div id="wrap">
-      <header id="header" class="stuck">
-        <div class="row">
-          <div class="span3">
-            <div id="logo">
-              <a href="index.html">
-                <img src="resources/images/Logo-bif-crono.png" alt="" />
-              </a>
-            </div>
+  <body class="app">
+   
+    <div id="u-app-wrapper" class="collapse-true expand panel-sm">
+      <div id="u-topbar">
+        <div class="title">
+          <img src="https://bifacil.github.io/resources.crono.net/img/logo-crono-min.png" alt="CRONO" />
+        </div>
+        <span class="left-panel-toggle">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </span>
+      </div>
+      <div id="u-left-panel" data-generationtime="344">
+        <div class="header-panel"> 
+          <div class="panel-user-wrapper style1">
+            <img src="https://bifacil.github.io/resources.crono.net/img/logo-crono.png" alt="CRONO" />
           </div>
-          <div class="span9">
-            <a href="#" id="mobile-menu-trigger">
-              <i class="fa fa-bars"></i>
-            </a>
-            <nav>
-              <ul class="sf-menu fixed" id="menu">
+        </div>
+        
+        <div class="panel-user-wrapper style1 min">
+          <img src="https://bifacil.github.io/resources.crono.net/img/logo-crono-ultramin.png" alt="CRONO" />
+        </div>
+        <span class="left-panel-toggle">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </span>
+        <!-- Nuevo boton para pasar a pantalla completa -->
+        <span class="left-panel-toggle3" onclick="expand();">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </span>
+        <!--  -->
+        <div id="u-left-menu">
+          <ul class="left-menu-wrapper list-unstyled">
+            <div class="preCardCols card-columns"> 
+            <div class="preCard card group0"> 
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Consulta</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
                 <li>
-                  <a href="index.html">Inicio</a>
+                  <a href="tiendas.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Tiendas</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
                 </li>
                 <li>
-                  <a href="archivo.html">Archivo</a>
+                  <a href="2012/ventas.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Ventas 2012</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="responsables.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Responsables</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="resultados.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Resultado</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
                 </li>
               </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <div class="row home_bif">
-        <div class="span4 item-left" id="bienvenido">
-          <h2>Bienvenido</h2>
-          <p class="tagline">Esto es un blog personal sobre Business Intelligence.</p>
-          <p>El blog se llama “Business Intelligence fácil” porque considero que las soluciones de BI deberían ser más fáciles de usar de lo que son.  Si decides quedarte, verás que es un tema recurrente en este sitio.</p>
-        </div>
-        <div class="span4 item-right" id="ultimos_articulos">
-          <h2>Últimos artículos</h2>
-          <div class="articulos_list">
-            <div class="separador"></div>
-            <h3>
-              <a href="2019/storyboards.html">¿Qué son los storyboards?</a>
-            </h3>
-            <p>¿Qué son los storyboards? ¿En qué se diferencian de los tradicionales dashboards?</p>
-            <a href="2019/storyboards.html" class="boton">LEER</a>
-          </div>
-          <div class="articulos_list">
-            <div class="separador"></div>
-            <h3>
-              <a href="2019/tipos-bi.html">Tipos de Business Intelligence</a>
-            </h3>
-            <p>Business Intelligence es un concepto muy amplio que incluye diferentes tipos de soluciones. En este artículo vemos los distintos tipos de BI existentes.</p>
-            <a href="2019/tipos-bi.html" class="boton">LEER</a>
-          </div>
-          <div class="articulos_list">
-            <div class="separador"></div>
-            <h3>
-              <a href="2019/vuelvo.html">Vuelvo</a>
-            </h3>
-            <p>He dejado abandonado este blog demasiado tiempo. Han pasado más de  2 años desde el último artículo. Ni unas míseras líneas para felicitar las navidades o el año nuevo. Tengo muchas cosas que contaros y quiero hacerlo.</p>
-            <a href="2019/vuelvo.html" class="boton">LEER</a>
-          </div>
-          <div class="articulos_list">
-            <div class="separador"></div>
-            <h3>
-              <a href="crono/cargar-dimensiones-dwh-scd.html">Cargar las dimensiones de un data warehouse</a>
-            </h3>
-            <p>Comparativa con ejemplos de la carga de una dimension Tipo 1. Si existe algún registro nuevo, lo añadiremos. Si algún registro ha cambiado, lo actualizaremos. 300 líneas de código pero con buen humor.</p>
-            <a href="crono/cargar-dimensiones-dwh-scd.html" class="boton">LEER</a>
-          </div>
-          <div class="articulos_list">
-            <div class="separador"></div>
-            <h3>
-              <a href="varios/lecturas-business-intelligence-recomendadas.html">Lecturas BI recomendadas (Sant Jordi 2017)</a>
-            </h3>
-            <p>Para este Sant jordi, si te dedicas al Business Intelligence, te recomendamos estas lecturas imprescindibles.</p>
-            <a href="varios/lecturas-business-intelligence-recomendadas.html" class="boton">LEER</a>
-          </div>
-        </div>
-        <div class="span4 item-left" id="por_donde_empezar">
-          <h2>Por dónde empezar</h2>
-          <p>Los artículos están clasificados por meses y por categorías. Tal vez quieras dar un vistazo al blog navegando entre los distintos artículos. Lee lo que te interese y comenta si quieres.</p>
-          <div class="botones_por_donde_empezar">
-            <a href="archivo.html" class="boton">ARTÍCULOS POR MESES</a>
-            <a href="categorias.html" class="boton">ARTÍCULOS POR CATEGORIAS</a>
-          </div>
-          <p>También puedes utilizar el cuadro de búsqueda del margen superior. Si aún así no encuentras lo que buscas, acude a nuestro flamante nuevo foro de BI para exponer tu cuestión u opinión:</p>
-          <div class="botones_por_donde_empezar">
-            <a href="http://businessintelligence.disq.us" class="boton">FORO BUSINESSS INTELLIGENCE</a>
-          </div>
-        </div>
-        <div class="span4 item-left" id="sobre_crono">
-          <h2>Sobre Crono</h2>
-          <img class="imgcenter" src="resources/images/icohomecrono.png" />
-          <p>CRONO es un software asequible y fácil de usar para construir informes, cuadros de mando, y hojas Excel. Puedes <a href="https://businessintelligence.es/" target="_blank">leer más sobre CRONO</a> y descargarte la versión de evaluación en la página de este <a href="https://businessintelligence.es">software de Business Intelligence</a>. Intentaré no aburriros con nuestras batallitas ni exagerar sobre sus bondades pero inevitablemente hablaré de Crono en este blog personal.  Si en alguna ocasión hablo en exceso sobre Crono, hacédmelo saber, que tampoco quiero aburriros :-)</p>
-          <img class="imgcenter" src="resources/images/previacrono.png" />
-          <p></p>
-          <a href="https://businessintelligence.es" class="boton">LEER</a>
-        </div>
-        <div class="span4 item-right" id="suscribete">
-          <h2>Suscríbete</h2>
-          <p>Si te gusta el Business Intelligence y quieres mantenerte informado,  suscríbete para  recibir las actualizaciones de este sitio.</p>
-          <a href="subscribe.html" class="boton">¡SÍ, QUIERO!</a>
-        </div>
-        <div class="span4 item-right" id="sobre_mi">
-          <h2>Sobre mi</h2>
-          <img class="imgcenter" src="resources/images/fotopauurquizu.png" />
-          <p>Soy Pau, consultor BI, autor de este blog, programador y socio de Crono. Tengo la suerte de que me gusta lo que hago y encima me pagan por ello. </p>
-          <a href="sobre-el-blog/contacto.html" class="boton">LEER</a>
-        </div>
-      </div>
-      <div class="row"></div>
-    </div>
-    <footer>
-      <div class="row">
-        <div class="span3">
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
             </li>
-            <li>
-              <a href="archivo.html">Archivo</a>
+            </div>
+            <div class="preCard card group1">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Gráficos</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="graficos-basicos.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Gráficos básicos</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="graficos-varios-indicadores.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Varios indicadores</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="graficos-dispersion.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Gráficos XY</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="categorias.html">Categorías</a>
+            </div>
+            <div class="preCard card group2">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Bootstrap</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="titulos.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Títulos</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="textos.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Textos</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="botones.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Botones</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="paneles.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Paneles</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tabs.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Tabs</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="modals.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Ventanas modales</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="formularios.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Formularios</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="sobre-el-blog/contacto.html">Contacto</a>
+            </div>
+            <!-- Grupo 3 -->
+            <div class="preCard card group3">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Grupo 3</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 1</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 2</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 3</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 4</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="sobre-el-blog/enlaces.html">Enlaces</a>
+            </div>
+            <!-- Grupo 4 -->
+            <div class="preCard card group4">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Grupo 4</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 1</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 2</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 3</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 4</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 5</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </li>
+            </div>
+            <!-- Grupo 5 -->
+            <div class="preCard card group5">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Grupo 5</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 1</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 2</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 3</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 4</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+            </div>
+            <!-- Grupo 6 -->
+            <div class="preCard card group6">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Grupo 6</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 1</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 2</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 3</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 4</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 5</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            </div>
+            <!-- Grupo 5 de nuevo -->
+            <div class="preCard card group5">
+            <li class="left-menu-parent">
+              <a class="active-state" href="#" style="pointer-events: none;">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Grupo 5</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 1</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 2</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 3</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 4</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Subgrupo 5</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            </div>
+            <!-- Fin grupos -->
+            </div>
           </ul>
         </div>
-        <div class="span3">
-          <div class="rrss-footer">
-            <a href="https://www.linkedin.com/company/businessintelligence" target="_blank" class="fa fa-linkedin"></a>
-            <a href="http://twitter.com/bifacil" target="_blank" class="fa fa-twitter"></a>
-            <a href="https://www.youtube.com/c/BusinessIntelligenceInfo" target="_blank" class="fa fa-youtube"></a>
-            <a href="https://www.facebook.com/CronoBusinessIntelligence" target="_blank" class="fa fa-facebook"></a>
+        <p class="text-menu-crono-rotated">MENÚ CRONO</p>
+      </div>
+      <div class="content-wrapper">
+        <hr id="anchor-point" />
+        <div class="container-fluid content-shrink">
+          <div class="row">
+            <div id="content" class="content col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+              <div class="page-header">
+                <h1></h1>
+              </div>
+              <div></div>
+            </div>
           </div>
         </div>
-        <div class="span3">
-          <section class="newsletter">
-            <p>¿Quieres recibir los artículos de este blog por correo electrónico? No te pierdas ni un artículo. Mantente informado sobre lo que ocurre en el mundo del Business Intelligence. 
-<a href="subscribe.html">¡Síguenos!</a></p>
-          </section>
-        </div>
       </div>
-    </footer>
-    <script src="resources/js/scripts.js"></script>
-    <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-      try {
-        var pageTracker = _gat._getTracker("UA-3456231-2");
-        pageTracker._trackPageview();
-      } catch(err) {}
+    </div>
+<a href="#popup1"><span class="user-name">SELVA\Pablo</span></a>
+
+<!-- Modal -->
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Título</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Texto
+      <button  type="button" class="btn btn-primary">Texto botón</button>
+    </div>
+  </div>
+</div>
+<!-- Fin modal -->
+    <script src="https://bifacil.github.io/resources.crono.net/js/init-crono.js" type="text/javascript"></script>
+    <script>  
+        function expand(){
+          if(document.querySelector('.expand')==null){
+                document.querySelector('#u-app-wrapper').classList.add('expand');
+                document.querySelector('#u-app-wrapper').classList.add('panel-sm');
+
+                document.querySelector('.preCardCols').classList.add('card-columns');
+
+                let cards=document.querySelectorAll('.preCard');
+                for(let i=0;i<cards.length;i++){
+                  cards[i].classList.add('card');
+                }
+
+                let as = document.querySelectorAll('.left-menu-parent>a');
+                for(let i=0;i<as.length;i++){
+                  as[i].setAttribute("style", "pointer-events:none;");
+                }
+
+                /*Expandimos si no lo estan*/
+                let listas=document.querySelectorAll('.left-menu-sub');
+                for(let i=0;i<listas.length;i++){
+                  listas[i].setAttribute("style", "display:block;");
+                }
+
+         
+          }else{
+            document.querySelector('#u-app-wrapper').classList.remove('expand');
+            document.querySelector('.preCardCols').classList.remove('card-columns');
+            let cards=document.querySelectorAll('.preCard');
+                for(let i=0;i<cards.length;i++){
+                  cards[i].classList.remove('card');
+                }
+
+            let as = document.querySelectorAll('.left-menu-parent>a');
+                for(let i=0;i<as.length;i++){
+                  as[i].removeAttribute("style", "pointer-events:none;");
+                }
+          }
+          
+        }
     </script>
   </body>
 </html>
