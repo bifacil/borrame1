@@ -1,5 +1,5 @@
 :root {
-  --azul-oscuro: #0B1980;
+  --azul-oscuro: #2A477F;
   --azul: #2e6db0;
   --azul-claro: #1DC7FF;
 }
@@ -39,9 +39,7 @@ position: relative;
 	width:100%;
 }
 
-#u-left-panel{
-	background-color: var(--azul);
-}
+
 
 .panel-cp #u-left-panel{
 	background-color: var(--azul-oscuro);
@@ -85,7 +83,7 @@ position: relative;
 	position: absolute;
     top: 0;
     left: 0;
-    margin: 4px;
+    margin: 7px;
 
 }
 
@@ -154,7 +152,7 @@ svg{
 		position: absolute;
 	    top: 0;
 	    left: 70px;
-	    margin: 4px;
+	    margin: 8px;
 
 	}
 	 .left-panel-toggle3{
@@ -186,6 +184,7 @@ svg{
 .left-menu-parent > .active-state {
     background-color: inherit;
     color: white;
+    font-size:20px;
 }
 
 .active-state .left-menu-link-icon .glyphicon.glyphicon-folder-close {
@@ -213,6 +212,7 @@ svg{
 
 .left-menu-sub.list-unstyled .left-menu-link-info .link-name {
     color: var(--azul-claro);
+    font-size: 15px;
 }
 
 /*Ocultamos el triangulito de al lado de las categorias*/
@@ -265,9 +265,9 @@ svg{
 	right:0;
 	position:absolute;
 	font-weight: bold;
-	color: blue;
-	margin-top: 10px;
-	margin-right: 5px;
+	color: var(--azul-oscuro);
+	margin-top: 15px;
+	margin-right: 15px;
 }
 
 @media (max-width: 768px){
@@ -291,6 +291,7 @@ svg{
 /*Ponemos los iconos al lado del nombre de la lista*/
 .left-menu-parent>a{
 	display: inline-flex;
+	font-size: 20px;
 }
 
 /*scrollbar style*/
@@ -386,7 +387,7 @@ svg{
 	transform: rotate(-90deg);
 	    white-space: nowrap;
     position: absolute;
-    left: -39.5px;
+    left: -44.5px;
     top: 128px;
     font-weight: 400;
     display: none;
@@ -409,10 +410,11 @@ svg{
     position: absolute;
     left: -11px;
     top: 2px;
+    margin-top: 5.5px;
 }
 
 .group0 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_cercleClar.png) no-repeat;
+    background: url(./icons/Crono_menu_cercleObscur.png) no-repeat;
 }
 
 .expand .group0 .glyphicon.glyphicon-folder-close:before{
@@ -420,7 +422,7 @@ svg{
 }
 
 .group1 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_cuadratClar.png) no-repeat;
+    background: url(./icons/Crono_menu_cuadratObscur.png) no-repeat;
 	
 }
 
@@ -430,7 +432,7 @@ svg{
 }
 
 .group2 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_hexagonClar.png) no-repeat;
+    background: url(./icons/Crono_menu_hexagonObscur.png) no-repeat;
 
 }
 .expand .group2 .glyphicon.glyphicon-folder-close:before{
@@ -439,7 +441,7 @@ svg{
 }
 
 .group3 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_pentagonClar.png) no-repeat;
+    background: url(./icons/Crono_menu_pentagonObscur.png) no-repeat;
 
 }
 .expand .group3 .glyphicon.glyphicon-folder-close:before{
@@ -448,7 +450,7 @@ svg{
 }
 
 .group4 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_poligon2Clar.png) no-repeat;
+    background: url(./icons/Crono_menu_poligon2Obscur.png) no-repeat;
 
 }
 .expand .group4 .glyphicon.glyphicon-folder-close:before{
@@ -456,7 +458,7 @@ svg{
 
 }
 .group5 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_poligonClar.png) no-repeat;
+    background: url(./icons/Crono_menu_poligonObscur.png) no-repeat;
 
 }
 .expand .group5 .glyphicon.glyphicon-folder-close:before{
@@ -464,7 +466,7 @@ svg{
 
 }
 .group6 .glyphicon.glyphicon-folder-close:before{
-    background: url(./icons/Crono_menu_triangleClar.png) no-repeat;
+    background: url(./icons/Crono_menu_triangleObscur.png) no-repeat;
 
 }
 .expand .group6 .glyphicon.glyphicon-folder-close:before{
@@ -478,3 +480,93 @@ svg{
 	}
 	
 }
+
+/*Retoques 2*/
+.expand .panel-user-wrapper.style1 img {
+    max-width: 225px;
+    width: 225px;
+    margin:30px 0;
+}
+
+.card{
+	border-radius: 0 !important;
+}
+
+.left-menu-parent ul a {
+	padding: 5px 7px 6px 45px !important;
+}
+
+.card-columns .card {
+    margin-bottom: 1.5rem !important;
+}
+
+.card-columns {
+	column-gap: 1.5rem !important;
+	max-width: 900px !important;
+}
+
+@media (min-width: 1200px){
+	
+}
+
+@media (min-width: 768px){
+	.panel-cp #u-left-panel {
+	    width: 39px;
+	    display: block;
+	}
+}
+
+.panel-user-wrapper.style1.min img {
+    max-width: 28px;
+    /* margin-right: 5px; */
+    /* padding-right: 14px; */
+    position: absolute;
+    top: 36px;
+    left: 5.5px !important;
+}
+
+.collapse-true.panel-cp.panel-lg .left-panel-toggle {
+    margin-left: 12px !important;
+    margin-top: 9px !important;
+}
+
+.panel-user-wrapper {
+   
+    margin-left: 34px !important;
+}
+
+.panel-user-wrapper.style1 img {
+    max-width: 173px;
+}
+
+.left-menu-parent a:focus{
+	color: white;
+}
+
+#u-left-panel, #u-topbar {
+    background-color: var(--azul);
+}
+
+.glyphicon.glyphicon-menu-hamburger {
+    color: white;
+}
+
+
+	.header-panel{
+-webkit-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
+-moz-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
+    box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
+}
+
+.expand .header-panel{
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+    box-shadow: none;
+}
+
+
+#u-left-menu{
+	z-index: -5;
+}
+
+
