@@ -24,11 +24,12 @@
     <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/jquery.slimscroll.min.js" type="text/javascript"></script>
     <script src="https://bifacil.github.io/resources.crono.net/ultra/js/ultra.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src='js/crono-menu.js'  type="text/javascript">  </script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
     
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1' type='text/css' media='all' />
 
 
@@ -514,7 +515,7 @@
 <div id="popup1" class="overlay">
   <div class="popup">
     <h2>Título</h2>
-    <a class="close" href="#">&times;</a>
+    <a class="close" href="#">x</a>
     <div class="content">
       Texto
       <button  type="button" class="btn btn-primary">Texto botón</button>
@@ -523,46 +524,5 @@
 </div>
 <!-- Fin modal -->
     <script src="https://bifacil.github.io/resources.crono.net/js/init-crono.js" type="text/javascript"></script>
-    <script>  
-        function expand(){
-          if(document.querySelector('.expand')==null){
-                document.querySelector('#u-app-wrapper').classList.add('expand');
-                document.querySelector('#u-app-wrapper').classList.add('panel-sm');
-
-                document.querySelector('.preCardCols').classList.add('card-columns');
-
-                let cards=document.querySelectorAll('.preCard');
-                for(let i=0;i<cards.length;i++){
-                  cards[i].classList.add('card');
-                }
-
-                let as = document.querySelectorAll('.left-menu-parent>a');
-                for(let i=0;i<as.length;i++){
-                  as[i].setAttribute("style", "pointer-events:none;");
-                }
-
-                /*Expandimos si no lo estan*/
-                let listas=document.querySelectorAll('.left-menu-sub');
-                for(let i=0;i<listas.length;i++){
-                  listas[i].setAttribute("style", "display:block;");
-                }
-
-         
-          }else{
-            document.querySelector('#u-app-wrapper').classList.remove('expand');
-            document.querySelector('.preCardCols').classList.remove('card-columns');
-            let cards=document.querySelectorAll('.preCard');
-                for(let i=0;i<cards.length;i++){
-                  cards[i].classList.remove('card');
-                }
-
-            let as = document.querySelectorAll('.left-menu-parent>a');
-                for(let i=0;i<as.length;i++){
-                  as[i].removeAttribute("style", "pointer-events:none;");
-                }
-          }
-          
-        }
-    </script>
-  </body>
+    </body>
 </html>
