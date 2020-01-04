@@ -3,6 +3,9 @@
   --azul: #2e6db0;
   --azul-claro: #1DC7FF;
 }
+
+
+
 #u-topbar {
 z-index: 1;
 position: fixed;
@@ -31,6 +34,10 @@ position: relative;
 }
 
 /*}*/
+
+.content{
+	margin-left: 250px; /* ASI NO ESTA BIEN. DEBER ADAPTARSE EN FUNCION DE LESTADO DEL MENU */
+}
 
 .expand .content-wrapper{
 	display: none;
@@ -409,7 +416,7 @@ svg{
     width: 23px;
     position: absolute;
     left: -11px;
-    top: 2px;
+    top: -17px;
     margin-top: 5.5px;
 }
 
