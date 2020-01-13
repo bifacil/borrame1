@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
-<html data-authenticationTime="0 ms" data-authorizeRequestTime="2 ms" data-engineCreationTime="64 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="12" data-evaluationTime="2" data-queryTime="0" data-evaluationsCount="485" data-queryCount="0" data-query="textos.html">
+<html data-authenticationTime="0 ms" data-authorizeRequestTime="2 ms" data-engineCreationTime="60 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="67" data-evaluationTime="20" data-queryTime="156" data-evaluationsCount="491" data-queryCount="4" data-query="ko1.html">
   <head>
-    <title>Textos</title>
+    <title>Web remota</title>
     <meta name="title" content="" />
     <meta name="application-name" content="Crono Web" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -439,73 +439,85 @@
           <div class="row">
             <div id="content" class="content col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
               <div class="page-header">
-                <h1>Textos</h1>
+                <h1>Web remota</h1>
               </div>
               <div>
-                <h2>Paragraph</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Primary Paragraph</h2>
-                <p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Info Paragraph</h2>
-                <p class="text-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Warning Paragraph</h2>
-                <p class="text-waring">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Danger Paragraph</h2>
-                <p class="text-danger">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Success Paragraph</h2>
-                <p class="text-success">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Muted Paragraph</h2>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <h2>Labels</h2>
-                <span class="label label-danger">label</span>
-                <span class="label label-primary">Primary label</span>
-                <span class="label label-success">Success label</span>
-                <span class="label label-info">Info label</span>
-                <span class="label label-warning">Warning label</span>
-                <span class="label label-danger">Danger label</span>
-                <span class="label label-default">Default label</span>
-                <h2>Alerts</h2>
-                <div class="alert alert-danger">alert</div>
-                <div class="alert alert-success">Success alert</div>
-                <div class="alert alert-info">Info alert</div>
-                <div class="alert alert-warning">Warning alert</div>
-                <div class="alert alert-danger">Danger alert</div>
-                <h2>Callouts</h2>
-                <div class="bs-callout bs-callout-danger">
-                  <h4>callout</h4>
-                  <span>Subtext</span>
-                </div>
                 <div class="bs-callout bs-callout-success">
-                  <h4>Success callout</h4>
-                  <span>Subtext</span>
+                  <h4>Esto es una prueba</h4>
+                  <span>Esta página utiliza la librería KnockoutJS para mantener enlazada la tabla con la selección de los menús</span>
                 </div>
-                <div class="bs-callout bs-callout-info">
-                  <h4>Info callout</h4>
-                  <span>Subtext</span>
-                </div>
-                <div class="bs-callout bs-callout-warning">
-                  <h4>Warning callout</h4>
-                  <span>Subtext</span>
-                </div>
-                <div class="bs-callout bs-callout-danger">
-                  <h4>Danger callout</h4>
-                  <span>Subtext</span>
-                </div>
-                <h2>Listas </h2>
-                <p>Esto es una lista:</p>
-                <ul>
-                  <li>Uno</li>
-                  <li>Dos</li>
-                  <li>Tres</li>
-                  <li>Cuatro</li>
-                </ul>
-                <p>Esto es una lista ordenada:</p>
-                <ol>
-                  <li>Uno</li>
-                  <li>Dos</li>
-                  <li>Tres</li>
-                  <li>Cuatro</li>
-                </ol>
+                <VIEW_MODEL>
+                  <div class="row">
+                    <div class="col col-md-6 col-sm-12">
+                      <select class="selectpicker" type="button" data-style="btn-danger" data-live-search="false" data-value-type="text" Value="FRANCIA" Data="ESPAÑA" BindValue="FRANCIA"></select>
+                      <view id="tablaVentas2" DependsOn="System.Collections.Generic.List`1[Crono.Sql.ExpressionUnary]">
+                        <div class="table-responsive">
+                          <table class="table" id="datatable1">
+                            <thead>
+                              <tr>
+                                <th>Tienda</th>
+                                <th class="text-right">Importe</th>
+                              </tr>
+                            </thead>
+                            <tr>
+                              <td>EIFFEL</td>
+                              <td data-order="1193762.79" class="text-right">1.193.762,79 €</td>
+                            </tr>
+                            <tr>
+                              <td>LYON</td>
+                              <td data-order="1153891.56" class="text-right">1.153.891,56 €</td>
+                            </tr>
+                            <tr>
+                              <td>LYON II</td>
+                              <td data-order="2261601.04" class="text-right">2.261.601,04 €</td>
+                            </tr>
+                            <tr>
+                              <td>PARIS II</td>
+                              <td data-order="2412545.14" class="text-right">2.412.545,14 €</td>
+                            </tr>
+                            <tr>
+                              <td>TOULOUSE</td>
+                              <td data-order="1848621.6" class="text-right">1.848.621,60 €</td>
+                            </tr>
+                          </table>
+                          <script>$(document).ready(function() {$("#datatable1").DataTable({ "paging": false, "info": false, "ordering": true, "order": [], "searching": false });});</script>
+                        </div>
+                      </view>
+                    </div>
+                    <div class="col col-md-6 col-sm-12">
+                      <select class="selectpicker" type="button" data-style="btn-info" data-live-search="false" data-value-type="text" Value="LYON" Data="ABANDO" BindValue="LYON"></select>
+                      <view id="tablaVentas" DependsOn="System.Collections.Generic.List`1[Crono.Sql.ExpressionUnary]">
+                        <div class="table-responsive">
+                          <table class="table" id="datatable2">
+                            <thead>
+                              <tr>
+                                <th class="text-right">Año</th>
+                                <th class="text-right">Importe</th>
+                              </tr>
+                            </thead>
+                            <tr>
+                              <td data-order="2009" class="text-right">2.009</td>
+                              <td data-order="831033.7" class="text-right">831.033,70 €</td>
+                            </tr>
+                            <tr>
+                              <td data-order="2010" class="text-right">2.010</td>
+                              <td data-order="996688.54" class="text-right">996.688,54 €</td>
+                            </tr>
+                            <tr>
+                              <td data-order="2011" class="text-right">2.011</td>
+                              <td data-order="1118783.46" class="text-right">1.118.783,46 €</td>
+                            </tr>
+                            <tr>
+                              <td data-order="2012" class="text-right">2.012</td>
+                              <td data-order="1153891.56" class="text-right">1.153.891,56 €</td>
+                            </tr>
+                          </table>
+                          <script>$(document).ready(function() {$("#datatable2").DataTable({ "paging": false, "info": false, "ordering": true, "order": [], "searching": false });});</script>
+                        </div>
+                      </view>
+                    </div>
+                  </div>
+                </VIEW_MODEL>
               </div>
             </div>
           </div>
