@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
-<html data-authenticationTime="1 ms" data-authorizeRequestTime="0 ms" data-engineCreationTime="59 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="13" data-evaluationTime="2" data-queryTime="0" data-evaluationsCount="485" data-queryCount="0" data-query="textos.html?x=17">
+﻿<!DOCTYPE html []>
+<html data-authenticationTime="1 ms" data-authorizeRequestTime="0 ms" data-engineCreationTime="56 ms" data-engineVariablesTime="0 ms" data-responseCreationTime="13" data-evaluationTime="1" data-queryTime="0" data-evaluationsCount="289" data-queryCount="0" data-query="textos.html?x=17">
   <head>
     <title>Textos</title>
-    <meta name="title" content="" />
+    <meta name="title" content="Textos" />
     <meta name="application-name" content="Crono Web" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://bifacil.github.io/resources.crono.net/css/bootstrap-callout.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://bifacil.github.io/resources.crono.net/js/behigh-bs-enhancement/dropdowns-enhancement.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://bifacil.github.io/resources.crono.net/js/behigh-bs-enhancement/dropdowns-enhancement.js"></script>
     <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
     <link href="https://bifacil.github.io/resources.crono.net/img/favicon.ico" rel="shortcut icon" />
@@ -22,14 +24,12 @@
     <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://bifacil.github.io/resources.crono.net/ultra/js/file/jquery.slimscroll.min.js" type="text/javascript"></script>
     <script src="https://bifacil.github.io/resources.crono.net/ultra/js/ultra.js" type="text/javascript"></script>
-    <script src="resources/crono-menu.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="resources/style.css" type="text/css" />
+    
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    <link rel="stylesheet" id="fontawesome-css" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1" type="text/css" media="all" />
   </head>
   <body class="app">
-    <div id="u-app-wrapper" class="collapse-true expand panel-sm">
+    <span style="top:0;right:0;position:absolute;z-index:1;">SELVA\Pablo</span>
+    <div id="u-app-wrapper" class="collapse-true">
       <div id="u-topbar">
         <div class="title">
           <img src="https://bifacil.github.io/resources.crono.net/img/logo-crono-min.png" alt="CRONO" />
@@ -37,15 +37,10 @@
         <span class="left-panel-toggle">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </span>
-        <span class="left-panel-toggle3" onclick="expand();">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </span>
       </div>
-      <div id="u-left-panel">
-        <div class="header-panel">
-          <div class="panel-user-wrapper style1">
-            <img src="resources/images/Crono_logo_250px.png" alt="CRONO" />
-          </div>
+      <div id="u-left-panel" data-generationtime="344">
+        <div class="panel-user-wrapper style1">
+          <img src="https://bifacil.github.io/resources.crono.net/img/logo-crono.png" alt="CRONO" />
         </div>
         <div class="panel-user-wrapper style1 min">
           <img src="https://bifacil.github.io/resources.crono.net/img/logo-crono-ultramin.png" alt="CRONO" />
@@ -53,385 +48,161 @@
         <span class="left-panel-toggle">
           <span class="glyphicon glyphicon-menu-hamburger"></span>
         </span>
-        <span class="left-panel-toggle3" onclick="expand();">
-          <span class="glyphicon glyphicon-menu-hamburger"></span>
-        </span>
         <div id="u-left-menu">
           <ul class="left-menu-wrapper list-unstyled">
-            <div class="preCardCols card-columns">
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+            <li class="left-menu-parent">
+              <a class="active-state" href="#">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Consulta</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="tiendas.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">Consulta</span>
+                      <span class="link-name">Tiendas</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="tiendas.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Tiendas</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="2012/ventas.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Ventas 2012</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="responsables.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Responsables</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="resultados.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Resultado</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+                <li>
+                  <a href="2012/ventas.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">Gráficos</span>
+                      <span class="link-name">Ventas 2012</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="graficos-basicos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Gráficos básicos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="graficos-varios-indicadores.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Varios indicadores</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="graficos-dispersion.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Gráficos XY</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+                <li>
+                  <a href="responsables.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">Bootstrap</span>
+                      <span class="link-name">Responsables</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="titulos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Títulos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="textos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Textos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="botones.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Botones</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="paneles.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Paneles</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tabs.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Tabs</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="modals.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Ventanas modales</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="formularios.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Formularios</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+                <li>
+                  <a href="resultados.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">KnockoutJS</span>
+                      <span class="link-name">Resultado</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="ko1.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Sample 1</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="ko2.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Sample 2</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+              </ul>
+            </li>
+            <li class="left-menu-parent">
+              <a class="active-state" href="#">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Gráficos</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="graficos-basicos.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">Bootstrap 2</span>
+                      <span class="link-name">Gráficos básicos</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="titulos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Títulos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="textos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Textos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="botones.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Botones</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="paneles.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Paneles</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tabs.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Tabs</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="modals.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Ventanas modales</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="formularios.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Formularios</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+                <li>
+                  <a href="graficos-varios-indicadores.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">Bootstrap 3</span>
+                      <span class="link-name">Varios indicadores</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="titulos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Títulos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="textos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Textos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="botones.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Botones</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="paneles.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Paneles</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tabs.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Tabs</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-              <div class="preCard card group0">
-                <li class="left-menu-parent">
-                  <a class="active-state" href="#" style="pointer-events: none;">
-                    <span class="left-menu-link-icon">
-                      <span class="glyphicon glyphicon-folder-close"></span>
-                    </span>
+                <li>
+                  <a href="graficos-dispersion.html" data-target="content">
                     <span class="left-menu-link-info">
-                      <span class="link-name">Bootstrap 4</span>
+                      <span class="link-name">Gráficos XY</span>
                       <span class="link-state"></span>
                     </span>
                   </a>
-                  <ul class="list-unstyled left-menu-sub" style="display: block;">
-                    <li>
-                      <a href="titulos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Títulos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="textos.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Textos</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="botones.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Botones</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="paneles.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Paneles</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tabs.html" data-target="content">
-                        <span class="left-menu-link-info">
-                          <span class="link-name">Tabs</span>
-                          <span class="link-state"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-              </div>
-            </div>
+              </ul>
+            </li>
+            <li class="left-menu-parent">
+              <a class="active-state" href="#">
+                <span class="left-menu-link-icon">
+                  <span class="glyphicon glyphicon-folder-close"></span>
+                </span>
+                <span class="left-menu-link-info">
+                  <span class="link-name">Bootstrap</span>
+                  <span class="link-state"></span>
+                </span>
+              </a>
+              <ul class="list-unstyled left-menu-sub" style="display: block;">
+                <li>
+                  <a href="titulos.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Títulos</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="textos.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Textos</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="botones.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Botones</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="paneles.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Paneles</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tabs.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Tabs</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="modals.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Ventanas modales</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="formularios.html" data-target="content">
+                    <span class="left-menu-link-info">
+                      <span class="link-name">Formularios</span>
+                      <span class="link-state"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <p class="text-menu-crono-rotated">MENÚ CRONO</p>
       </div>
       <div class="content-wrapper">
         <hr id="anchor-point" />
@@ -510,16 +281,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <a href="#popup1">
-      <span class="user-name">SELVA\Pablo</span>
-    </a>
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <h2>Título</h2>
-        <a class="close" href="#">x</a>
-        <div class="content">		 Texto		 <button type="button" class="btn btn-button">Texto botón</button></div>
       </div>
     </div>
     <script src="https://bifacil.github.io/resources.crono.net/js/init-crono.js" type="text/javascript"></script>
