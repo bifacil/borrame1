@@ -96,7 +96,7 @@ function comprobarPagina(){
     this.speed = this.options.slideSpeed;
     this.parent = this.options.parent;
     // AC -> Active Class
-    this.ac = this.options.activeClass;
+    //this.ac = this.options.activeClass;
     // CP -> Collapse panel
     this.cp = this.options.collapsePanel
     // OC -> Off canvas
