@@ -44,6 +44,7 @@ function comprobarPagina(){
      expand();
      document.querySelector('#u-left-panel .left-panel-toggle3').remove();
       if(anc <768){ 
+        document.querySelector('#u-topbar .left-panel-toggle').remove();
         document.querySelector('#u-app-wrapper').classList.remove('ini');
         document.querySelector('#u-app-wrapper').classList.add('panel-sm');
          document.querySelector('#u-app-wrapper').classList.add('expand');
