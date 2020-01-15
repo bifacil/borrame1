@@ -255,12 +255,11 @@
   background-color: white;
 }
 #u-left-panel {
-  height: 100vh;
   position: absolute;
   top: 0px;
   left: 0px;
   z-index: 2;
-
+  height: 100%;
   width: 240px;
   display: none;
   background-color: #363636;
@@ -746,9 +745,9 @@ svg{
 
 /*Boton para expandir*/
 .left-panel-toggle3{
-	font-size: 13.5px;
+	font-size: 17;
 	position: absolute;
-	top:4px;
+	top:0;
 	left: 213px;
 	margin: 4px;
 	z-index: 1000000;
@@ -1041,66 +1040,67 @@ svg{
     width: 23px;
     position: absolute;
     left: -11px;
-    top: -12px;
+    top: 2px;
+    margin-top: 5.5px;
 }
 
-.preCard:first-child .glyphicon.glyphicon-folder-close:before{
+.group0 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_cercleObscur.png) no-repeat;
 }
 
-.expand .preCard:first-child .glyphicon.glyphicon-folder-close:first-child:before{
+.expand .group0 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_cercleObscur.png) no-repeat;
 }
 
- .preCard:nth-child(2) .glyphicon.glyphicon-folder-close:before{
+.group1 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_cuadratObscur.png) no-repeat;
 	
 }
 
-.expand .preCard:nth-child(2) .glyphicon.glyphicon-folder-close:before{
+.expand .group1 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_cuadratObscur.png) no-repeat;
 
 }
 
-.preCard:nth-child(3) .glyphicon.glyphicon-folder-close:before{
+.group2 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_hexagonObscur.png) no-repeat;
 
 }
-.expand .preCard:nth-child(3) .glyphicon.glyphicon-folder-close:before{
+.expand .group2 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_hexagonObscur.png) no-repeat;
 
 }
 
-.preCard:nth-child(4) .glyphicon.glyphicon-folder-close:before{
+.group3 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_pentagonObscur.png) no-repeat;
 
 }
-.expand .preCard:nth-child(4) .glyphicon.glyphicon-folder-close:before{
+.expand .group3 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_pentagonObscur.png) no-repeat;
 
 }
 
-.preCard:nth-child(5) .glyphicon.glyphicon-folder-close:before{
+.group4 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_poligon2Obscur.png) no-repeat;
 
 }
-.expand .preCard:nth-child(5) .glyphicon.glyphicon-folder-close:before{
+.expand .group4 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_poligon2Obscur.png) no-repeat;
 
 }
-.preCard:nth-child(6) .glyphicon.glyphicon-folder-close:before{
+.group5 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_poligonObscur.png) no-repeat;
 
 }
-.expand .preCard:nth-child(6) .glyphicon.glyphicon-folder-close:before{
+.expand .group5 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_poligonObscur.png) no-repeat;
 
 }
-.preCard:nth-child(7) .glyphicon.glyphicon-folder-close:before{
+.group6 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_triangleObscur.png) no-repeat;
 
 }
-.expand .preCard:nth-child(7) .glyphicon.glyphicon-folder-close:before{
+.expand .group6 .glyphicon.glyphicon-folder-close:before{
     background: url(./icons/Crono_menu_triangleObscur.png) no-repeat;
 
 }
@@ -1200,19 +1200,11 @@ svg{
 	z-index: -5;
 }
 
-.container-fluid{
-  width: auto;
-}
-
 
 .content-shrink {
     margin-left: 240px !important;
     left: 0px !important;
-
-}
-
-.panel-sm.expand .content-shrink.container-fluid{
-  display: none;
+    margin-right: 30px !important;
 }
 
 @media (min-width: 768px){
