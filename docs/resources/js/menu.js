@@ -40,13 +40,16 @@ function expand(){
 
 function comprobarPagina(){
   var anc = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if(document.location.href.split("/")[document.location.href.split("/").length-1].split("#")[0] == "index.html"){
+  if(document.querySelector('[data-page="index"]')){
      expand();
+     document.querySelector('#u-left-panel .left-panel-toggle3').remove();
       if(anc <768){ 
+        document.querySelector('#u-topbar .left-panel-toggle').remove();
         document.querySelector('#u-app-wrapper').classList.remove('ini');
         document.querySelector('#u-app-wrapper').classList.add('panel-sm');
          document.querySelector('#u-app-wrapper').classList.add('expand');
         }
+
   }else{
     
     if(anc <768){
@@ -629,3 +632,83 @@ function comprobarPagina(){
   window.ultra_menu = ultra_menu;
 
 })(jQuery, window, document);
+
+// INIT CRONO
+
+
+function createUltraMenu(){
+  $('#u-left-panel .left-menu-wrapper').ultraMenu({
+    
+    // Collapse Panel ON/OFF
+    collapsePanel: true,
+    preCollapse: false,
+
+    // Panel Width Settings
+    panelWidth: 240,
+    collapsePanelWidth: 50,
+
+    // JS based Offcanvas Effect
+    offCanvas: false,
+    offCanvasSpeed: 200,
+    offCanvasClass: 'offcanvas-mode',
+
+    // Horizontal Mode
+    horizontal: false,
+    horizontalClass: 'panel-horizontal',
+
+
+    // Show on hover
+    showHover: false,
+
+    // RTL Mode
+    rtl: false
+
+  });
+}
+
+// Slimscroll Selector
+var selector_slim = $('#u-left-menu');
+// Slimscroll Handlers
+function handleScrollResize(){
+    var color1;
+    if($('body').hasClass('skin-light')){
+        color1 = '#000';
+    }
+    else {
+        color1 = '#fff';
+    }
+
+    if(selector_slim.parent('.slimScrollDiv').length === 1){
+        selector_slim.slimScroll({
+            destroy: true
+        });
+    }
+    /*
+  var slimHeight = $('#u-left-panel').height();
+  $('#u-left-panel').children(':not(#u-left-menu)').each(function () {
+    slimHeight = slimHeight - $(this).height();
+  });*/
+  var slimHeight = $(window).height() - selector_slim.offset().top -20; // -20 porque el cálculo no es del todo correcto, supongo que cuando se añade la sidebar, quedan por algún lado 20px extra
+    selector_slim.slimScroll({
+        height: slimHeight, // Value 190 is measured by Hit and Trial (Caliberation required) 
+        color: color1,
+        size: '7px',
+        opacity: '0.4',
+        wheelStep: 15.0
+    });
+}
+
+
+
+
+function initUltraMenu(){
+  createUltraMenu(); //Inicializa el menu lateral (permite colapsar el menú, desplear y plegar los items desplegables, ...)
+
+  //handleScrollResize(); //añade scroll en el menú lateral si es necesario
+  //window.prettyPrint && prettyPrint();
+}
+
+
+$(document).ready(function() {
+  initUltraMenu();
+});
