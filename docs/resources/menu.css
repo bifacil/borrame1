@@ -633,7 +633,7 @@ body {
 }
 
 .header-panel{
-	background-color: var(--azul-oscuro);
+	background-color: var(--azul);
 }
 
 .expand .header-panel{
@@ -873,7 +873,7 @@ svg{
 }
 /*Estilo de los encabezados expandidos*/
 .expand .left-menu-link-info .link-name {
-	color: var(--azul-claro) !important;
+	color: var(--azul) !important;
 }
 
 .expand .left-menu-link-info .link-name:hover {
@@ -1189,9 +1189,9 @@ svg{
 
 
 	.header-panel{
--webkit-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
--moz-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
-    box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
+-webkit-box-shadow: -1px 6px 4px 0px var(--azul);
+-moz-box-shadow: -1px 6px 4px 0px var(--azul);
+    box-shadow: -1px 6px 4px 0px var(--azul);
 }
 
 .expand .header-panel{
