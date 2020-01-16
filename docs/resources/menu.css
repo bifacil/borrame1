@@ -702,7 +702,7 @@ position: relative;
 	}
 
 .panel-user-wrapper.style1{
-	padding-top: 30px;
+	padding-top: 26px;
 	padding-bottom: 15px;
 
 }
@@ -713,7 +713,15 @@ position: relative;
 
 .left-panel-toggle{
 	position: absolute;
-    top: 0;
+    top: 57px;
+    left: 209px;
+    margin: 7px;
+
+}
+
+.panel-cp .left-panel-toggle{
+  position: absolute;
+    top: -2px;
     left: 0;
     margin: 7px;
 
@@ -1129,7 +1137,7 @@ svg{
 }
 
 .left-menu-parent ul a {
-	padding: 5px 7px 6px 45px !important;
+	padding: 5px 7px 2px 45px !important;
 }
 
 .card-columns .card {
@@ -1189,9 +1197,9 @@ svg{
 
 
 	.header-panel{
--webkit-box-shadow: -1px 6px 4px 0px var(--azul);
--moz-box-shadow: -1px 6px 4px 0px var(--azul);
-    box-shadow: -1px 6px 4px 0px var(--azul);
+-webkit-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
+-moz-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
+    box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
 }
 
 .expand .header-panel{
