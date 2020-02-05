@@ -325,6 +325,7 @@ function comprobarPagina(){
           }, self.options.offCanvasSpeed, '', function () {
               self.ge.removeClass('panel-cp');
               self.ge.removeClass('panel-lg');
+
               self.ge.removeClass(self.options.offCanvasClass);
               self.obj.css('width', '');
           });
@@ -362,6 +363,7 @@ function comprobarPagina(){
             var elm = $(this);
             
             var data = elm.parent().find('> ul');
+
             
             if(!self.ge.hasClass('panel-cp') && !(self.ge.hasClass(self.options.horizontalClass) && ($(window).width() > self.xs))) {
 
@@ -380,7 +382,7 @@ function comprobarPagina(){
                     });
                     
                     data.slideDown(self.speed, function(){
-                        elm.addClass(self.ac).find('.' + self.closeClass[1]).removeClass(self.closeClass[1]).addClass(self.openClass[1]);
+                        //elm.addClass(self.ac).find('.' + self.closeClass[1]).removeClass(self.closeClass[1]).addClass(self.openClass[1]);
                     }); 
                 }
             }
@@ -393,7 +395,6 @@ function comprobarPagina(){
 
             var elm = $(this);
             var data = elm.parent().find('ul:first');
-
             if (!(self.ge.hasClass(self.options.horizontalClass) && ($(window).width() > self.xs))) {
 
               if (self.options.autoFocus) {
@@ -478,6 +479,8 @@ function comprobarPagina(){
           }
           if (self.cp) {
             self.ge.toggleClass('panel-cp');
+              self.ge.toggleClass('para-anim');
+            
           
             // Resetting some menu classes
                     $(self.parent + ' .' + self.ac).each(function(){ $(this).removeClass(self.ac); });

@@ -1,3 +1,32 @@
+.panel-user-wrapper.style1{
+  overflow-x: hidden !important;
+}
+
+#u-left-panel{
+  transition: all 1s;
+}
+
+#u-left-panel *{
+  transition: all 1s, background-color 0s, opacity 0s, box-shadow 0s, padding 0s, margin 0s;
+}
+
+.container-fluid.content-shrink{
+
+  transition: margin 1s;
+
+
+}
+
+.list-unstyled.left-menu-sub{
+  -webkit-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -o-transition-property: none !important;
+  transition-property: none !important;
+}
+/*.preCard *{
+  transition: background-color 0s !important; 
+}
+*/
 /*TOPBAR*/
 #u-topbar {
     z-index: 1;
@@ -262,7 +291,7 @@
   z-index: 2;
 
   width: 240px;
-  display: none;
+  /*display: none;*/
   background-color: #363636;
   padding-top: 20px;
 }
@@ -307,10 +336,10 @@
 }
 @media (max-width: 768px) {
   #u-left-panel {
-    display: none;
+    /*display: none;*/
   }
   .panel-sm #u-left-panel {
-    display: block;
+    /*display: block;*/
   }
 }
 @media (min-width: 768px) {
@@ -659,7 +688,7 @@ body {
 /*@media (max-width: 768px){*/
 	.expand #u-left-panel{
 
-position: relative;
+/*position: relative;*/
 }
 
 /*}*/
@@ -698,7 +727,10 @@ position: relative;
 		
 	/*Cuando collapsamos, no mostramos los items del menu*/
 	.panel-cp #u-left-menu{
-		display: none;
+		/*display: none;*/
+    width: 0;
+    visibility: hidden;
+    /*opacity: 0; ESTO*/
 	}
 
 .panel-user-wrapper.style1{
@@ -737,10 +769,50 @@ svg{
    content: "\f100";
    font-weight: 900;
 }
+
+
+
+@keyframes example {
+  0%   {opacity: 100%}
+  10% {opacity: 0}
+  75% {opacity: 0}
+  100% {opacity: 100%;}
+}
+
+@keyframes example2 {
+  0%   {opacity: 100%}
+  10% {opacity: 0}
+  75% {opacity: 0}
+  100% {opacity: 100%;}
+}
+
+@media (min-width: 768px){
+  .para-anim .glyphicon-menu-hamburger{
+    animation-name: example2;
+    animation-duration: 1s;
+
+  }
+
+  .panel-cp .glyphicon-menu-hamburger{
+    animation-name: example;
+    animation-duration: 1s;
+
+  }
+
+  .panel-sm.para-anim .glyphicon-menu-hamburger{
+    animation-name: none;
+    animation-duration: 1s;
+
+  }
+}
+
 .panel-cp .glyphicon-menu-hamburger:before{
    content: "\f101";
+    
 
 }
+
+
 
 .panel-sm .glyphicon-menu-hamburger:before {
 	content: "\f100";
@@ -1176,7 +1248,8 @@ svg{
 
 .panel-user-wrapper {
    
-    margin-left: 34px !important;
+    margin-left: 0px !important;
+    padding-left: 34px;
 }
 
 .panel-user-wrapper.style1 img {
@@ -1195,6 +1268,11 @@ svg{
     color: white;
 }
 
+/* .panel-cp .header-panel{
+-webkit-box-shadow: -1px 6px 4px 0px var(--azul);
+-moz-box-shadow: -1px 6px 4px 0px var(--azul);
+    box-shadow: -1px 6px 4px 0px var(--azul);
+}*/
 
 	.header-panel{
 -webkit-box-shadow: -1px 6px 4px 0px var(--azul-oscuro);
@@ -1240,10 +1318,15 @@ svg{
 
 @media (max-width: 768px){
     #u-left-panel{
-        display: none !important;
+        /*display: none !important;*/
+        width: 0 !important;
+        opacity: 0;
+
     }
     .panel-sm #u-left-panel{
-        display: block !important;
+        width: 100% !important;
+        opacity: 100%; 
+        /*display: block !important;*/
     }
     .panel-sm.ini #u-left-panel{
         display: none !important;
