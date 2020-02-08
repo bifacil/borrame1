@@ -2,6 +2,8 @@ function expand(){
           if(document.querySelector('.expand')==null){
                 document.querySelector('#u-app-wrapper').classList.add('expand');
                 document.querySelector('#u-app-wrapper').classList.add('panel-sm');
+                document.querySelector('#u-app-wrapper').classList.remove('para-anim3');
+
 
                 document.querySelector('.preCardCols').classList.add('card-columns');
 
@@ -24,6 +26,9 @@ function expand(){
          
           }else{
             document.querySelector('#u-app-wrapper').classList.remove('expand');
+                document.querySelector('#u-app-wrapper').classList.add('para-anim2');
+                document.querySelector('#u-app-wrapper').classList.add('para-anim3');
+
             document.querySelector('.preCardCols').classList.remove('card-columns');
             let cards=document.querySelectorAll('.preCard');
                 for(let i=0;i<cards.length;i++){
@@ -480,6 +485,7 @@ function comprobarPagina(){
           if (self.cp) {
             self.ge.toggleClass('panel-cp');
               self.ge.toggleClass('para-anim');
+
             
           
             // Resetting some menu classes
