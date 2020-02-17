@@ -200,14 +200,7 @@
     display: none;
   }
 }
-@media (max-width: 768px) {
-  #u-left-panel {
-    /*display: none;*/
-  }
-  .panel-sm #u-left-panel {
-    /*display: block;*/
-  }
-}
+
 @media (min-width: 768px) {
   .panel-cp #u-left-panel {
     width: 50px;
@@ -347,7 +340,6 @@ User Profile Styles
   margin-left:20px;
 }
 .style1 .panel-user {
-  display: inline-block;
   text-align: left;
   margin: 20px 15px 20px 20px;
   float: left;
